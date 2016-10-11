@@ -1,0 +1,18 @@
+<h1> TO DO List </h1>
+
+<ul>
+<% @tasks.each do |task| %>
+  <h2> <%= task.name %>  </h2>
+  <p> <%= task.description %> </p>
+  <p> <%= task.done %> </p>
+  <%= link_to "Description", task_path(task.id)%>
+    </p>
+  <% end %>
+</ul>
+
+<%= link_to "Ajouter une tâche", new_task_path %>
+
+
+
+
+
